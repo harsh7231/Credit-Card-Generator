@@ -1,38 +1,225 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.color-image{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.front-image{
+  position: absolute;
+  display: flex;
+  top:10%;
+  left:15%;
+  z-index: 1;
+  border-radius: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.back-image{
+  position: absolute;
+  display: flex;
+  top:50%;
+  left:21%;
+  z-index: 1;
+  border-radius: 10px;
+  border-style:  #FFFFFF;
+}
+.card-number{
+  position: absolute;
+  display: flex;
+  top:27%;
+  z-index: 1;
+  left:17%;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: #FFFFFF;
+}
+.card-holder{
+  position: absolute;
+  display: flex;
+  top:32%;
+  z-index: 1;
+  left:17%;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+.card-expiryMM{
+  position: absolute;
+  display: flex;
+  top:32%;
+  z-index: 1;
+  left:32%;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+.card-expiryYY{
+  position: absolute;
+  display: flex;
+  top:32%;
+  z-index: 1;
+  left:34%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+.card-expiry-slash{
+  position: absolute;
+  display: flex;
+  top:32%;
+  z-index: 1;
+  left:33.4%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+.card-cvv{
+  position: absolute;
+  display: flex;
+  top:63%;
+  z-index: 1;
+  left:39.5%;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+.card-name{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:25%;
+  left:55%;
+  color: rgb(39, 11, 39);
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+.card-name-input{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:29%;
+  left:55%;
+  height: 40px;
+  width: 400px;
+  border-radius: 10px;
+  border: solid #88838340;
+}
+input::placeholder{
+  position: absolute;
+  color: #64616140;
+  font-size:19px;
+  left: 3%;
+  top:20%;
+  letter-spacing: 3px;
+}
+.card-no{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:37%;
+  left:55%;
+  color: rgb(39, 11, 39);
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+.card-no-input{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:41%;
+  left:55%;
+  height: 40px;
+  width: 400px;
+  border-radius: 10px;
+  border: solid #88838340;
+}
+.expiry{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:49%;
+  left:55%;
+  color: rgb(39, 11, 39);
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+.card-expiry-MM{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:53%;
+  left:55%;
+  height: 40px;
+  width: 50px;
+  border-radius: 10px;
+  border: solid #88838340;
+}
+.card-expiry-YY{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:53%;
+  left:59%;
+  height: 40px;
+  width: 50px;
+  border-radius: 10px;
+  border: solid #88838340;
+}
+.cvc{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:49%;
+  left:68%;
+  color: rgb(39, 11, 39);
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+.card-cvv-input{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  position: absolute;
+  display:flex;
+  top:53%;
+  left:68%;
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  border: solid #88838340;
+}
+button {
+  font-family: sans-serif;
+  position: absolute;
+  height: 52px;
+  width: 400px;
+  top:62%;
+  left:55%;
+  background-color: rgb(39, 11, 39);
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.name-error {
+  position: absolute;
+  color: red;
+  margin-top: 5px;
+  top:33.5%;
+  left:55%;
+}
+.number-error{
+  position: absolute;
+  color: red;
+  margin-top:5px;
+  top:45.5%;
+  left:55%;
+}
+.expiry-error{
+  position: absolute;
+  color: red;
+  margin-top:5px;
+  top:57.5%;
+  left:55%;
+}
+.cvv-error{
+  position: absolute;
+  color: red;
+  margin-top:5px;
+  top:57.5%;
+  left:68.1%;
 }
